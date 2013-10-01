@@ -75,6 +75,14 @@ config CPU_FREQ_DEFAULT_GOV_USERSPACE
 	  you to set the CPU frequency manually or when a userspace 
 	  program shall be able to set the CPU dynamically without having
 	  to enable the userspace governor manually.
+	  
+config CPU_FREQ_DEFAULT_GOV_LAGFREE
+	bool "lagfree"
+	select CPU_FREQ_GOV_LAGFREE
+	help
+	  Use the CPUFreq governor 'lagfree' as default. This allows
+	  you to set the best configuration to have the smoother experience.
+	  
 
 config CPU_FREQ_DEFAULT_GOV_ONDEMAND
 	bool "ondemand"
